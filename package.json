@@ -5,18 +5,25 @@
   "license": "Apache-2.0",
   "scripts": {
     "build": "npm run build --workspaces --if-present",
-    "generate":"npm run generate --workspaces --if-present",
-    "pack":"npm run build && npm pack --workspaces",
-    "build:universal":"npm run build --workspace universal/ts",
-    "clean":"npm run clean --workspaces --if-present"
+    "generate": "npm run generate --workspaces --if-present",
+    "pack": "npm run build && npm pack --workspaces",
+    "build:universal": "npm run build --workspace universal/ts",
+    "clean": "npm run clean --workspaces --if-present"
   },
   "devDependencies": {
-    "typescript": "^5.4.5"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
   },
   "workspaces": [
     "universal/ts",
     "evm",
     "solana",
     "solver"
-  ]
+  ],
+  "dependencies": {
+    "@wormhole-foundation/example-liquidity-layer-definitions": "^0.0.1",
+    "@wormhole-foundation/example-liquidity-layer-evm": "^0.0.1",
+    "@wormhole-foundation/example-liquidity-layer-solana": "^0.0.1",
+    "@wormhole-foundation/example-liquidity-layer-solver": "^0.0.1"
+  }
 }

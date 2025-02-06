@@ -14,10 +14,17 @@
     },
     "dependencies": {
         "@solana/spl-token": "^0.4.6",
-        "@wormhole-foundation/example-liquidity-layer-solana": "0.0.1",
-        "@wormhole-foundation/sdk-base": "^0.10.9",
-        "@wormhole-foundation/sdk-definitions": "^0.10.9",
-        "@wormhole-foundation/sdk-solana": "^0.10.9",
-        "zeromq": "^6.1.2"
+        "@wormhole-foundation/example-liquidity-layer-evm": "0.0.1",
+        "@wormhole-foundation/example-liquidity-layer-solana": "file:../wormhole-foundation-example-liquidity-layer-solana-0.0.1.tgz",
+        "@wormhole-foundation/sdk-base": "1.1.1",
+        "@wormhole-foundation/sdk-definitions": "1.1.1",
+        "@wormhole-foundation/sdk-solana": "1.1.1",
+        "state": "^0.2.0",
+        "zeromq": "^6.3.0"
+    },
+    "devDependencies": {
+        "ts-node": "^10.9.2",
+        "tsx": "^4.19.2",
+        "typescript": "^5.7.2"
     }
 }

@@ -14,7 +14,7 @@
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build": "npm run build:esm && npm run build:cjs",
-    "generate": "typechain --target=ethers-v5 --out-dir=ts/src/types out/[!build-info]*/*.json",
+    "generate": "typechain --show-stack-traces --target=ethers-v5 --out-dir=ts/src/types 'out/[!build-info]*/*.json'",
     "clean": "rm -rf dist && rm -rf node_modules && rm -f ./*.tsbuildinfo"
   },
   "exports": {
@@ -31,16 +31,16 @@
   },
   "dependencies": {
     "@wormhole-foundation/example-liquidity-layer-definitions": "0.0.1",
-    "@wormhole-foundation/sdk-base": "^0.10.9",
-    "@wormhole-foundation/sdk-definitions": "^0.10.9",
-    "@wormhole-foundation/sdk-evm": "^0.10.9",
+    "@wormhole-foundation/sdk-base": "1.1.1",
+    "@wormhole-foundation/sdk-definitions": "1.1.1",
+    "@wormhole-foundation/sdk-evm": "1.1.1",
     "ethers-v5": "npm:ethers@^5.7.2"
   },
   "devDependencies": {
     "@typechain/ethers-v5": "^10.2.0",
     "@types/chai": "^4.3.4",
     "@types/mocha": "^10.0.1",
-    "@types/node": "^18.19.64",
+    "@types/node": "^18.14.5",
     "chai": "^4.3.7",
     "dotenv": "^16.3.1",
     "envfile": "^7.1.0",
